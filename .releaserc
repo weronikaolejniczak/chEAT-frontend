@@ -1,0 +1,38 @@
+{
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          {
+            "path": "dist/**/*.{js,html,css}",
+            "label": "Application bundle"
+          }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "dist/**/*.{js,html,css,svg,png}",
+          "docs",
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} :tada: [skip ci]"
+      }
+    ]
+  ]
+}
