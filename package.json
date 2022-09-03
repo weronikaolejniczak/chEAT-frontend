@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "repository": "https://github.com/weronikaolejniczak/chEAT-frontend.git",
+  "homepage": "https://weronikaolejniczak.github.io/chEAT",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
@@ -13,10 +14,13 @@
     "build-storybook": "build-storybook",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "lint": "eslint ./src/*"
+    "lint": "eslint ./src/*",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "firebase": "^9.9.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
