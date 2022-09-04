@@ -1,10 +1,17 @@
+import { MouseEventHandler } from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { CustomIcon } from './styles';
+
 type IconPropsType = {
   name: string;
+  onClick?: MouseEventHandler<SVGSVGElement>;
 };
 
-/**
- * TO DO
- */
-export const Icon = ({ name }: IconPropsType) => {
-  return <div>{name}</div>;
+export const Icon = ({
+  name,
+  onClick,
+  ...rest
+}: Omit<FontAwesomeIconProps, 'icon'> & IconPropsType) => {
+  return <CustomIcon {...rest} onClick={onClick} icon={name as IconProp} />;
 };

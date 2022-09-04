@@ -30,13 +30,13 @@ OutlinedButton.args = {
 
 export const ButtonWithLeftIcon = Template.bind({});
 ButtonWithLeftIcon.args = {
-  icon: <Icon name="icon" />,
+  icon: <Icon name="circle-xmark" />,
   iconAlignment: EIconAlignment.left,
   label: 'Click me!',
 };
 
 export const ButtonWithRightIcon = Template.bind({});
 ButtonWithRightIcon.args = {
-  icon: <Icon name="icon" />,
+  icon: <Icon name="circle-xmark" />,
   label: 'Click me!',
 };
