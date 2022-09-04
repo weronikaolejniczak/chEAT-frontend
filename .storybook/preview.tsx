@@ -1,6 +1,7 @@
 import React from 'react';
 import { DecoratorFn } from '@storybook/react';
 
+import '../src/font-awesome';
 import { darkTheme, lightTheme } from '../src/constants/themes';
 import { ThemedBlock } from '../src/components/layouts/ThemedBlock';
 import { Preview } from '../src/components/layouts/Preview';
