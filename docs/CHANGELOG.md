@@ -1,3 +1,9 @@
+# [1.3.0](https://github.com/weronikaolejniczak/chEAT-frontend/compare/v1.2.0...v1.3.0) (2022-09-04)
+
+### Features
+
+- **UI:** :lipstick: create Icon component ([f3ed5d3](https://github.com/weronikaolejniczak/chEAT-frontend/commit/f3ed5d35a0e60d03d4eeeec348d4ffb991b3b09f)), closes [#19](https://github.com/weronikaolejniczak/chEAT-frontend/issues/19)
+
 # [1.2.0](https://github.com/weronikaolejniczak/chEAT-frontend/compare/v1.1.0...v1.2.0) (2022-09-04)
 
 ### Features
