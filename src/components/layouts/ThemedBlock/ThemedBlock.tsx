@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { GlobalStyles } from '../../UI/GlobalStyles';
+import { GlobalStyles } from 'components/UI/GlobalStyles';
 import { Wrapper } from './styles';
 
 type ThemedBlockPropsType = {
