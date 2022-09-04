@@ -4,7 +4,7 @@ import { Benefits } from './pages/Benefits';
 import { Goals } from './pages/Goals';
 import { Home } from './pages/Home';
 import { Redeem } from './pages/Redeem';
-import { Theme } from './Theme';
+import { Theme } from './components/providers/Theme';
 
 export const App = () => {
   return (
