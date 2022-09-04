@@ -15,7 +15,7 @@ const baseTheme = {
   },
 };
 
-export enum ThemesEnum {
+export enum EThemes {
   dark = 'dark',
   light = 'light',
 }
@@ -25,7 +25,7 @@ type ColorsType = {
   text: string;
 };
 
-export const Theme = (key: ThemesEnum, colors: ColorsType) => ({
+export const Theme = (key: EThemes, colors: ColorsType) => ({
   ...baseTheme,
   key,
   colors: { ...baseTheme.colors, ...colors },
@@ -33,12 +33,12 @@ export const Theme = (key: ThemesEnum, colors: ColorsType) => ({
 
 export type ThemeType = ReturnType<typeof Theme>;
 
-export const darkTheme = Theme(ThemesEnum.dark, {
+export const darkTheme = Theme(EThemes.dark, {
   background: palette.raisinBlack,
   text: palette.babyPowder,
 });
 
-export const lightTheme = Theme(ThemesEnum.light, {
+export const lightTheme = Theme(EThemes.light, {
   background: palette.babyPowder,
   text: palette.raisinBlack,
 });
