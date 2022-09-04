@@ -15,8 +15,8 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint ./src/*",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "firebase": "^9.9.3",
