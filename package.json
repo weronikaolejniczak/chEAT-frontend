@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "type": "module",
   "repository": "https://github.com/weronikaolejniczak/chEAT-frontend.git",
-  "homepage": "https://weronikaolejniczak.github.io/chEAT",
+  "homepage": "https://weronikaolejniczak.github.io/chEAT-frontend/",
   "scripts": {
     "prepare": "husky install",
     "dev": "vite",
