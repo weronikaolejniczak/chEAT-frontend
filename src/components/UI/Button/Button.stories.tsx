@@ -1,7 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Icon } from 'components/UI/Icon';
-import { Button, EButtonVariant, EIconAlignment } from './Button';
+import { EIconAlignment } from 'enums/EIconAlignment';
+import { Button, EButtonVariant } from './Button';
 
 export default {
   title: 'UI/Button',

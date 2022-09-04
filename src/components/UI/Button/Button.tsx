@@ -1,11 +1,7 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
+import { EIconAlignment } from 'enums/EIconAlignment';
 import { StyledButton } from './styles';
-
-export enum EIconAlignment {
-  left = 'left',
-  right = 'right',
-}
 
 export enum EButtonVariant {
   primary = 'primary',
