@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/weronikaolejniczak/chEAT-frontend/compare/v1.1.0...v1.2.0) (2022-09-04)
+
+### Features
+
+- **routing:** :sparkles: change BrowserRouter to HashRouter ([4c41bec](https://github.com/weronikaolejniczak/chEAT-frontend/commit/4c41becd49305adf35598d41aaf3c544153fd00d))
+
 # [1.1.0](https://github.com/weronikaolejniczak/chEAT-frontend/compare/v1.0.0...v1.1.0) (2022-09-04)
 
 ### Features
