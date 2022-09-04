@@ -1,10 +1,9 @@
 import React from 'react';
 import { DecoratorFn } from '@storybook/react';
-import { ThemeProvider } from 'styled-components';
 
 import { darkTheme, lightTheme } from '../src/constants/themes';
-import { GlobalStyles } from '../src/components/UI/GlobalStyles';
 import { ThemedBlock } from '../src/components/layouts/ThemedBlock';
+import { Preview } from '../src/components/layouts/Preview';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -14,6 +13,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'fullscreen',
 };
 
 const withTheme: DecoratorFn = (Story, context) => {
@@ -23,30 +23,21 @@ const withTheme: DecoratorFn = (Story, context) => {
   switch (theme) {
     case 'side-by-side': {
       return (
-        <>
-          <ThemeProvider theme={lightTheme}>
-            <GlobalStyles />
-            <ThemedBlock center left>
-              <Story />
-            </ThemedBlock>
-          </ThemeProvider>
-          <ThemeProvider theme={darkTheme}>
-            <GlobalStyles />
-            <ThemedBlock center>
-              <Story />
-            </ThemedBlock>
-          </ThemeProvider>
-        </>
+        <Preview>
+          <ThemedBlock theme={lightTheme}>
+            <Story />
+          </ThemedBlock>
+          <ThemedBlock theme={darkTheme}>
+            <Story />
+          </ThemedBlock>
+        </Preview>
       );
     }
     default: {
       return (
-        <ThemeProvider theme={storyTheme}>
-          <GlobalStyles />
-          <ThemedBlock center fill>
-            <Story />
-          </ThemedBlock>
-        </ThemeProvider>
+        <ThemedBlock fill theme={storyTheme}>
+          <Story />
+        </ThemedBlock>
       );
     }
   }
