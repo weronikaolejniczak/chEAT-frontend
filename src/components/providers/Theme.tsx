@@ -2,6 +2,7 @@ import { ReactNode, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 import { darkTheme, lightTheme } from 'constants/themes';
+import { GlobalStyles } from 'components/UI/GlobalStyles';
 
 const prefersDarkColorScheme = window.matchMedia?.(
   '(prefers-color-scheme: dark)'
@@ -22,6 +23,7 @@ export const Theme = ({ children }: ThemePropsType) => {
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <GlobalStyles />
       {children}
     </ThemeProvider>
   );
