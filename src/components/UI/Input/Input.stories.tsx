@@ -1,8 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { StorybookWrapper } from 'components/layouts/StorybookWrapper';
 import { Icon } from '../Icon';
 import { Input } from './Input';
-import { StorybookWrapper } from './styles';
 
 export default {
   title: 'UI/Input',

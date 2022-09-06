@@ -2,10 +2,6 @@ import styled from 'styled-components';
 
 import { InputPropsType } from './Input';
 
-export const StorybookWrapper = styled.div`
-  width: 300px;
-`;
-
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
