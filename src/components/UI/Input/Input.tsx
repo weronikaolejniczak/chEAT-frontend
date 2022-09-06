@@ -1,3 +1,4 @@
+import { UseFormRegister } from 'react-hook-form';
 import { ReactNode, InputHTMLAttributes } from 'react';
 
 import {
@@ -10,10 +11,13 @@ import {
 
 type CustomPropsType = {
   id: string;
-  error?: string;
+  error?: string | undefined;
   helperText?: ReactNode;
   icon?: ReactNode;
   label: string;
+  // TODO: fix any type
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  register?: UseFormRegister<any>;
 };
 
 export type InputPropsType = InputHTMLAttributes<HTMLInputElement> &
@@ -25,6 +29,7 @@ export const Input = ({
   helperText,
   icon,
   label,
+  register,
   ...rest
 }: InputPropsType) => {
   return (
@@ -32,6 +37,7 @@ export const Input = ({
       <StyledHelperText error={!!error}>{error ?? helperText}</StyledHelperText>
       <StyledInput
         {...rest}
+        {...register?.(id)}
         error={error}
         icon={icon}
         id={id}
