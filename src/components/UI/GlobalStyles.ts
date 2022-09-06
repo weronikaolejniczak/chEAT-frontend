@@ -39,4 +39,9 @@ export const GlobalStyles = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.accent};
+    text-decoration: none;
+  }
 `;
