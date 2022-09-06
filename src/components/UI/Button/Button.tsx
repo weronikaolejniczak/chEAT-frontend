@@ -13,7 +13,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: ReactNode;
   iconAlignment?: EIconAlignment;
   outlined?: boolean;
-  variant: EButtonVariant;
+  variant?: EButtonVariant;
 }
 
 export const Button = ({
