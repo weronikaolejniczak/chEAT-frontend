@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
-import { IButtonProps } from './Button';
+import { EButtonVariant, IButtonProps } from './Button';
 
-export const StyledButton = styled.button<IButtonProps>`
+type StyledButtonPropsType = Omit<IButtonProps, 'variant'> & {
+  variant: EButtonVariant;
+};
+
+export const StyledButton = styled.button<StyledButtonPropsType>`
   align-items: center;
   background-color: ${({ outlined, theme, variant }) =>
     outlined ? 'transparent' : theme.colors[variant]};
@@ -16,6 +20,7 @@ export const StyledButton = styled.button<IButtonProps>`
   justify-content: center;
   padding: 0.8em 2em;
   transition: all 0.3s ease-out;
+  width: 100%;
 
   &:hover {
     transform: scale(1.05);
