@@ -36,7 +36,7 @@ export const LoginForm = () => {
     await logInWithEmailAndPassword(email, password);
 
   return (
-    <>
+    <div data-testid="login-form">
       <Form.Header>
         <h1>chEAT</h1>
       </Form.Header>
@@ -71,6 +71,6 @@ export const LoginForm = () => {
           Don&apos;t have an account? <Link to="/register">Register</Link> now!
         </p>
       </Form.Footer>
-    </>
+    </div>
   );
 };
