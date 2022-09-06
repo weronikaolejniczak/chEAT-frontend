@@ -1,5 +1,6 @@
 import React from 'react';
 import { DecoratorFn } from '@storybook/react';
+import { BrowserRouter } from 'react-router-dom';
 
 import '../src/font-awesome';
 import { darkTheme, lightTheme } from '../src/constants/themes';
@@ -44,7 +45,15 @@ const withTheme: DecoratorFn = (Story, context) => {
   }
 };
 
-export const decorators = [withTheme];
+const withRouter = (Story) => {
+  return (
+    <BrowserRouter>
+      <Story />
+    </BrowserRouter>
+  );
+};
+
+export const decorators = [withRouter, withTheme];
 
 export const globalTypes = {
   theme: {
