@@ -22,9 +22,14 @@ export const PasswordInput = ({
       label={label}
       icon={
         isVisible ? (
-          <Icon name="eye-slash" onClick={toggleIsVisible} />
+          <Icon focusable name="eye-slash" onClick={toggleIsVisible} />
         ) : (
-          <Icon name="eye" onClick={toggleIsVisible} />
+          <Icon
+            data-testid="show-password"
+            focusable
+            name="eye"
+            onClick={toggleIsVisible}
+          />
         )
       }
       type={isVisible ? 'text' : 'password'}
