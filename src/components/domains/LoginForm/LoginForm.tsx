@@ -13,7 +13,10 @@ import { EButtonVariant } from 'components/UI/Button/Button';
 
 const schema = yup
   .object({
-    email: yup.string().email().required('E-mail is required!'),
+    email: yup
+      .string()
+      .email('E-mail has to be valid!')
+      .required('E-mail is required!'),
     password: yup.string().required('Password is required!'),
   })
   .required();
