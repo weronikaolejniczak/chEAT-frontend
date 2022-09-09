@@ -1,25 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
 
 import { signInWithGoogle } from 'services/auth/signInGoogle';
+import { logInWithEmailAndPassword } from 'services/auth/signInPassword';
 import { Input } from 'components/UI/Input';
 import { Button } from 'components/UI/Button';
+import { EButtonVariant } from 'components/UI/Button/Button';
 import { PasswordInput } from 'components/UI/PasswordInput';
 import { Form } from 'components/layouts/Form';
-import { logInWithEmailAndPassword } from 'services/auth/signInPassword';
-import { EButtonVariant } from 'components/UI/Button/Button';
-
-const schema = yup
-  .object({
-    email: yup
-      .string()
-      .email('E-mail has to be valid!')
-      .required('E-mail is required!'),
-    password: yup.string().required('Password is required!'),
-  })
-  .required();
+import { schema } from 'schemas/loginForm';
 
 type FormData = {
   email: string;
