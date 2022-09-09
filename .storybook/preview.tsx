@@ -45,7 +45,7 @@ const withTheme: DecoratorFn = (Story, context) => {
   }
 };
 
-const withRouter = (Story) => {
+const withRouter: DecoratorFn = (Story) => {
   return (
     <BrowserRouter>
       <Story />
