@@ -32,12 +32,15 @@ export const Input = ({
   register,
   ...rest
 }: InputPropsType) => {
+  const text = error ?? helperText;
+
   return (
     <Wrapper>
-      <StyledHelperText error={!!error}>{error ?? helperText}</StyledHelperText>
+      {text && <StyledHelperText error={!!error}>{text}</StyledHelperText>}
       <StyledInput
         {...rest}
         {...register?.(id)}
+        aria-invalid={error ? 'true' : 'false'}
         error={error}
         icon={icon}
         id={id}
@@ -45,7 +48,7 @@ export const Input = ({
         placeholder=" "
       />
       <StyledLabel htmlFor={id}>{label}</StyledLabel>
-      <StyledIcon>{icon}</StyledIcon>
+      {icon && <StyledIcon>{icon}</StyledIcon>}
     </Wrapper>
   );
 };
