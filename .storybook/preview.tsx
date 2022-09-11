@@ -1,11 +1,16 @@
 import React from 'react';
 import { DecoratorFn } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
+import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 import '../src/font-awesome';
 import { darkTheme, lightTheme } from '../src/constants/themes';
 import { ThemedBlock } from '../src/components/layouts/ThemedBlock';
 import { Preview } from '../src/components/layouts/Preview';
+
+initialize({
+  onUnhandledRequest: 'bypass',
+});
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -53,7 +58,7 @@ const withRouter: DecoratorFn = (Story) => {
   );
 };
 
-export const decorators = [withRouter, withTheme];
+export const decorators = [withRouter, withTheme, mswDecorator];
 
 export const globalTypes = {
   theme: {
