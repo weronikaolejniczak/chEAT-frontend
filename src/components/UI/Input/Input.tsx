@@ -44,7 +44,6 @@ export const Input = ({
         error={error}
         icon={icon}
         id={id}
-        name={id}
         placeholder=" "
       />
       <StyledLabel htmlFor={id}>{label}</StyledLabel>

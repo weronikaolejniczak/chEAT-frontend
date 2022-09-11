@@ -20,35 +20,28 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const DefaultInput = Template.bind({});
 DefaultInput.args = {
-  id: 'name',
-  label: 'Name',
-};
-
-export const PasswordInput = Template.bind({});
-PasswordInput.args = {
-  id: 'name',
-  label: 'Name',
-  icon: <Icon name="eye" onClick={() => console.log('Show password')} />,
+  id: 'first-name',
+  label: 'First name',
 };
 
 export const InputWithHelperText = Template.bind({});
 InputWithHelperText.args = {
-  id: 'name',
-  helperText: 'Enter your first name.',
-  label: 'Name',
+  id: 'last-name',
+  helperText: 'Enter your last name.',
+  label: 'Last name',
 };
 
 export const InputWithError = Template.bind({});
 InputWithError.args = {
-  id: 'name',
-  error: 'Some error text!',
-  label: 'Name',
+  id: 'address',
+  error: 'Please enter your address!',
+  label: 'Address',
 };
 
 export const InputWithErrorAndIcon = Template.bind({});
 InputWithErrorAndIcon.args = {
-  id: 'name',
-  error: 'Some error text!',
-  label: 'Name',
-  icon: <Icon name="eye" onClick={() => console.log('Show password')} />,
+  id: 'search',
+  error: 'Invalid search query.',
+  label: 'Search',
+  icon: <Icon name="magnifying-glass" />,
 };

@@ -36,7 +36,7 @@ DefaultPasswordInput.play = async ({ canvasElement }) => {
 
 export const VisiblePasswordInput = Template.bind({});
 VisiblePasswordInput.args = {
-  id: 'password',
+  id: 'visible-password',
   label: 'Password',
 };
 VisiblePasswordInput.play = async ({ canvasElement }) => {
