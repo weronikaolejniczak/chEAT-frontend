@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import login from 'mocks/handlers/login';
 import { expect, within, user } from 'utils/plays';
 import { messages } from 'schemas/loginForm';
 import { LoginForm } from './LoginForm';
@@ -7,6 +8,11 @@ import { LoginForm } from './LoginForm';
 export default {
   title: 'Domains/Login/LoginForm',
   component: LoginForm,
+  parameters: {
+    msw: {
+      handlers: [...login],
+    },
+  },
 } as ComponentMeta<typeof LoginForm>;
 
 const Template: ComponentStory<typeof LoginForm> = () => <LoginForm />;
