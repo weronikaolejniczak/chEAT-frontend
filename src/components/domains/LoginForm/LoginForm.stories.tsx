@@ -32,7 +32,7 @@ CorrectForm.play = async ({ canvasElement }) => {
   const submitButton = await canvas.findByRole('button', {
     name: /^login$/i,
   });
-  user.click(submitButton);
+  await user.click(submitButton);
   const emailError = canvas.queryByText(new RegExp(messages.email.format));
   const passwordError = canvas.queryByText(
     new RegExp(messages.password.required)
@@ -55,7 +55,7 @@ IncorrectForm.play = async ({ canvasElement }) => {
   const submitButton = await canvas.findByRole('button', {
     name: /^login$/i,
   });
-  user.click(submitButton);
+  await user.click(submitButton);
   const emailError = await canvas.findByText(new RegExp(messages.email.format));
   const passwordError = await canvas.findByText(
     new RegExp(messages.password.required)
