@@ -6,7 +6,7 @@ import { Wrapper } from './styles';
 
 type ThemedBlockPropsType = {
   children: ReactNode;
-  fill?: boolean;
+  half?: boolean;
   theme: DefaultTheme;
 };
 
@@ -15,13 +15,13 @@ type ThemedBlockPropsType = {
  */
 export const ThemedBlock = ({
   children,
-  fill,
+  half,
   theme,
 }: ThemedBlockPropsType) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Wrapper fill={fill}>{children}</Wrapper>
+      <Wrapper half={half}>{children}</Wrapper>
     </ThemeProvider>
   );
 };

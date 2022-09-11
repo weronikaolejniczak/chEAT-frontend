@@ -31,10 +31,10 @@ const withTheme: DecoratorFn = (Story, context) => {
     case 'side-by-side': {
       return (
         <Preview>
-          <ThemedBlock theme={lightTheme}>
+          <ThemedBlock half theme={lightTheme}>
             <Story />
           </ThemedBlock>
-          <ThemedBlock theme={darkTheme}>
+          <ThemedBlock half theme={darkTheme}>
             <Story />
           </ThemedBlock>
         </Preview>
@@ -42,7 +42,7 @@ const withTheme: DecoratorFn = (Story, context) => {
     }
     default: {
       return (
-        <ThemedBlock fill theme={storyTheme}>
+        <ThemedBlock theme={storyTheme}>
           <Story />
         </ThemedBlock>
       );
