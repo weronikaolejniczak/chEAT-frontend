@@ -4,14 +4,14 @@ import login from 'mocks/handlers/login';
 import { expect, within, user } from 'utils/plays';
 import { messages } from 'schemas/loginForm';
 import { LoginForm } from './LoginForm';
+import { page } from './LoginForm.docs';
 
 export default {
   title: 'Domains/Login/LoginForm',
   component: LoginForm,
   parameters: {
-    msw: {
-      handlers: [...login],
-    },
+    docs: { page },
+    msw: { handlers: [...login] },
   },
 } as ComponentMeta<typeof LoginForm>;
 
