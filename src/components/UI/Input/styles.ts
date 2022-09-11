@@ -28,7 +28,7 @@ export const StyledInput = styled.input<StyledInputPropsType>`
 `;
 
 export const StyledLabel = styled.label`
-  color: grey;
+  color: ${({ theme }) => theme.colors.placeholder};
   font-size: 1.6rem;
   left: calc(2px + 1.6rem);
   position: absolute;
