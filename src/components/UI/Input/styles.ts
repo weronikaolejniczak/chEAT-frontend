@@ -50,11 +50,12 @@ export const StyledIcon = styled.div`
   top: 1.65rem;
 `;
 
-type StyledHelperTextPropsType = {
-  error?: boolean;
-};
+export const StyledHelperText = styled.div`
+  color: ${({ theme }) => theme.colors.text};
+  font-size: 1.4rem;
+`;
 
-export const StyledHelperText = styled.div<StyledHelperTextPropsType>`
-  color: ${({ error, theme }) => error && theme.colors.error};
+export const StyledError = styled.div`
+  color: ${({ theme }) => theme.colors.error};
   font-size: 1.4rem;
 `;

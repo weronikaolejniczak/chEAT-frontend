@@ -1,7 +1,10 @@
-import { UseFormRegister } from 'react-hook-form';
 import { ReactNode, InputHTMLAttributes } from 'react';
+import { useTranslation } from 'react-i18next';
+import { UseFormRegister } from 'react-hook-form';
 
+import { ENamespaces } from 'i18n';
 import {
+  StyledError,
   StyledHelperText,
   StyledIcon,
   StyledInput,
@@ -32,11 +35,14 @@ export const Input = ({
   register,
   ...rest
 }: InputPropsType) => {
-  const text = error ?? helperText;
+  const { t } = useTranslation(ENamespaces.errors);
+
+  const errorText = error ? t(error) : '';
 
   return (
     <Wrapper>
-      {text && <StyledHelperText error={!!error}>{text}</StyledHelperText>}
+      {helperText && <StyledHelperText>{helperText}</StyledHelperText>}
+      {error && <StyledError>{errorText}</StyledError>}
       <StyledInput
         {...rest}
         {...register?.(id)}

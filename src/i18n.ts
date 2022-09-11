@@ -13,6 +13,7 @@ const fallbackLng = ELocales.en;
 export enum ENamespaces {
   common = 'common',
   login = 'login',
+  errors = 'errors',
 }
 
 const defaultNS = ENamespaces.common;

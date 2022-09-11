@@ -1,0 +1,5 @@
+{
+  "email-invalid-format-error": "E-mail has to be valid!",
+  "email-required-error": "E-mail is required!",
+  "password-required-error": "Password is required!"
+}

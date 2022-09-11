@@ -2,11 +2,11 @@ import * as yup from 'yup';
 
 export const messages = {
   email: {
-    format: 'E-mail has to be valid!',
-    required: 'E-mail is required!',
+    format: 'email-invalid-format-error',
+    required: 'email-required-error',
   },
   password: {
-    required: 'Password is required!',
+    required: 'password-required-error',
   },
 };
 
