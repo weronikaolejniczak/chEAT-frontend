@@ -1,12 +1,12 @@
 const palette = {
   babyPowder: '#fdfffc',
-  blueMunsell: '#0091ad',
-  flame: '#eb5e28',
+  blueMunsell: '#0280a6',
+  flame: '#e22f02',
   darkGrey: '#666666',
   lightGrey: '#aaaaaa',
   purpureus: '#9d44b5',
   raisinBlack: '#161925',
-  rosePink: '#ff57bb',
+  rosePink: '#e30f7f',
 };
 
 const baseTheme = {
