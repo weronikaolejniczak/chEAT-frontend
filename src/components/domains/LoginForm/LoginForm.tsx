@@ -1,7 +1,9 @@
+import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import { ENamespaces } from 'i18n';
 import { signInWithGoogle } from 'services/auth/signInGoogle';
 import { logInWithEmailAndPassword } from 'services/auth/signInPassword';
 import { Input } from 'components/UI/Input';
@@ -17,6 +19,7 @@ type FormData = {
 };
 
 export const LoginForm = () => {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -37,31 +40,35 @@ export const LoginForm = () => {
         <Input
           id="email"
           error={errors.email?.message}
-          label="E-mail"
+          label={t('email')}
           type="text"
           register={register}
         />
         <PasswordInput
           id="password"
           error={errors.password?.message}
-          label="Password"
+          label={t('password')}
           type="password"
           register={register}
         />
-        <Button type="submit" label="Login" />
+        <Button type="submit" label={t('login:submit-button')} />
       </Form>
       <Form.Footer>
         <Button
           type="button"
           onClick={signInWithGoogle}
-          label="Login with Google"
+          label={t('login:google-login-button')}
           variant={EButtonVariant.secondary}
         />
         <p>
-          <Link to="/reset-password">I forgot my password</Link>
+          <Link to="/reset-password">{t('login:reset-password-link')}</Link>
         </p>
         <p>
-          Don&apos;t have an account? <Link to="/register">Register</Link> now!
+          <Trans
+            components={[<Link key="0" to="/register" />]}
+            i18nKey="login:register-link"
+            ns={ENamespaces.login}
+          />
         </p>
       </Form.Footer>
     </div>
