@@ -1,11 +1,10 @@
-import { injectAxe, checkA11y } from 'axe-playwright';
-import type { TestRunnerConfig } from '@storybook/test-runner';
+const { injectAxe, checkA11y } = require('axe-playwright');
 
 /*
  * See https://storybook.js.org/docs/react/writing-tests/test-runner#test-hook-api-experimental
  * to learn more about the test-runner hooks API.
  */
-const a11yConfig: TestRunnerConfig = {
+const a11yConfig = {
   async preRender(page) {
     await injectAxe(page);
   },
