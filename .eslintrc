@@ -25,11 +25,5 @@
     "react": {
       "version": "detect"
     }
-  },
-  "overrides": [
-    {
-      "files": ["**/__tests__/**/*.ts?(x)", "**/?(*.)+(spec|test).ts?(x)"],
-      "extends": ["plugin:testing-library/react", "plugin:jest-dom/recommended"]
-    }
-  ]
+  }
 }
