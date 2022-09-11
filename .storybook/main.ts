@@ -13,6 +13,7 @@ module.exports = {
     builder: '@storybook/builder-vite',
   },
   features: {
+    interactionsDebugger: true,
     storyStoreV7: true,
   },
   async viteFinal(config) {
