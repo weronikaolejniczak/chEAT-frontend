@@ -1,20 +1,24 @@
+import { useTranslation } from 'react-i18next';
+
 import { NavLink } from '../NavLink';
 import { StyledNav } from './styles';
 
 export const Nav = () => {
+  const { t } = useTranslation();
+
   return (
     <StyledNav>
       <NavLink icon="home" to="/">
-        Home
+        {t('home')}
       </NavLink>
       <NavLink icon="gem" to="/benefits">
-        Benefits
+        {t('benefits')}
       </NavLink>
       <NavLink icon="bullseye" to="/goals">
-        Goals
+        {t('goals')}
       </NavLink>
-      <NavLink icon="shop" to="/">
-        Redeem
+      <NavLink icon="shop" to="/reedem">
+        {t('redeem')}
       </NavLink>
     </StyledNav>
   );

@@ -1,4 +1,12 @@
 {
+  "benefits": "Benefits",
   "email": "E-mail",
-  "password": "Password"
+  "goals": "Goals",
+  "home": "Home",
+  "login": "Log in",
+  "logout": "Log out",
+  "password": "Password",
+  "redeem": "Redeem",
+  "register": "Register",
+  "welcome-message": "Welcome, {{user}}!"
 }
