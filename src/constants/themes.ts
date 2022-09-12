@@ -1,12 +1,14 @@
 const palette = {
-  babyPowder: '#fdfffc',
+  black: '#13151f',
   blueMunsell: '#0280a6',
-  flame: '#e22f02',
+  cultured: '#f5f5f5',
   darkGrey: '#666666',
+  flame: '#e22f02',
   lightGrey: '#aaaaaa',
   purpureus: '#9d44b5',
   raisinBlack: '#161925',
   rosePink: '#e30f7f',
+  white: '#fcfcfc',
 };
 
 const baseTheme = {
@@ -27,6 +29,7 @@ export enum EThemes {
 type ColorsType = {
   background: string;
   placeholder: string;
+  surface: string;
   text: string;
 };
 
@@ -41,11 +44,13 @@ export type ThemeType = ReturnType<typeof Theme>;
 export const darkTheme = Theme(EThemes.dark, {
   background: palette.raisinBlack,
   placeholder: palette.lightGrey,
-  text: palette.babyPowder,
+  surface: palette.black,
+  text: palette.white,
 });
 
 export const lightTheme = Theme(EThemes.light, {
-  background: palette.babyPowder,
+  background: palette.white,
   placeholder: palette.darkGrey,
+  surface: palette.cultured,
   text: palette.raisinBlack,
 });
