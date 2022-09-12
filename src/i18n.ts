@@ -8,20 +8,17 @@ enum ELocales {
   en = 'en',
 }
 
-const fallbackLng = ELocales.en;
-
 export enum ENamespaces {
   common = 'common',
   login = 'login',
   errors = 'errors',
 }
 
-const defaultNS = ENamespaces.common;
 const ns = Object.values(ENamespaces);
 
 i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
-  fallbackLng,
-  defaultNS,
+  fallbackLng: ELocales.en,
+  defaultNS: ENamespaces.common,
   ns,
 });
 
