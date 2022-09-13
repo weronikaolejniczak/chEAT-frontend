@@ -7,16 +7,19 @@ import { Home } from 'pages/Home';
 import { Login } from 'pages/Login';
 import { Redeem } from 'pages/Redeem';
 import { Theme } from 'components/providers/Theme';
+import { ProtectedRoute } from 'components/layouts/ProtectedRoute';
 
 export const App = () => {
   return (
     <Theme>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="benefits" element={<Benefits />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="goals" element={<Goals />} />
-        <Route path="redeem" element={<Redeem />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="benefits" element={<Benefits />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="goals" element={<Goals />} />
+          <Route path="redeem" element={<Redeem />} />
+        </Route>
         <Route path="login" element={<Login />} />
       </Routes>
     </Theme>
