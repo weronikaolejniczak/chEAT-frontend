@@ -15,5 +15,9 @@ export const Login = () => {
     if (user) navigate('/');
   }, [user, loading, navigate]);
 
-  return <Page center>{loading ? <div>Loading</div> : <LoginForm />}</Page>;
+  return (
+    <Page center showMenu={false}>
+      {loading ? <div>Loading</div> : <LoginForm />}
+    </Page>
+  );
 };
