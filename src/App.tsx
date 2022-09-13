@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import { Benefits } from 'pages/Benefits';
 import { Dashboard } from 'pages/Dashboard';
@@ -12,6 +13,7 @@ import { ProtectedRoute } from 'components/layouts/ProtectedRoute';
 export const App = () => {
   return (
     <Theme>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route element={<ProtectedRoute />}>
