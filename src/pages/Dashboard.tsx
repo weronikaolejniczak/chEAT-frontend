@@ -1,3 +1,5 @@
+import { Page } from 'components/layouts/Page';
+
 export const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return <Page>Dashboard</Page>;
 };

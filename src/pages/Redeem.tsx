@@ -1,3 +1,5 @@
+import { Page } from 'components/layouts/Page';
+
 export const Redeem = () => {
-  return <div>Redeem</div>;
+  return <Page>Redeem</Page>;
 };

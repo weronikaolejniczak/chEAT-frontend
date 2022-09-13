@@ -1,3 +1,5 @@
+import { Page } from 'components/layouts/Page';
+
 export const Benefits = () => {
-  return <div>Benefits</div>;
+  return <Page>Benefits</Page>;
 };
