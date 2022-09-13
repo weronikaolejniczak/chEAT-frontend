@@ -1,7 +1,6 @@
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, Outlet } from 'react-router-dom';
 
-import { auth } from 'firebase';
+import { useAuth } from 'hooks/useAuth';
 
 type ProtectedRoutePropsType = {
   redirectPath?: string;
@@ -10,7 +9,7 @@ type ProtectedRoutePropsType = {
 export const ProtectedRoute = ({
   redirectPath = '/login',
 }: ProtectedRoutePropsType) => {
-  const [user] = useAuthState(auth);
+  const [user] = useAuth();
 
   if (!user) return <Navigate to={redirectPath} replace />;
 

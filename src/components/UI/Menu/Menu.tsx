@@ -1,14 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
 
-import { auth } from 'firebase';
+import { useAuth } from 'hooks/useAuth';
 import { Nav } from '../Nav';
 import { Content, Footer, Header, StyledMenu } from './styles';
 
 export const Menu = () => {
   const { t } = useTranslation();
-  const [user] = useAuthState(auth);
+  const [user] = useAuth();
 
   return (
     <StyledMenu>

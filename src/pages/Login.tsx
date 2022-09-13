@@ -1,18 +1,17 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
 
-import { auth } from 'firebase';
+import { useAuth } from 'hooks/useAuth';
 import { Page } from 'components/layouts/Page';
 import { LoginForm } from 'components/domains/LoginForm';
 
 // TODO: add skeleton loader
 export const Login = () => {
   const navigate = useNavigate();
-  const [user, loading] = useAuthState(auth);
+  const [user, loading] = useAuth();
 
   useEffect(() => {
-    if (user) navigate('/dashboard');
+    if (user && !loading) navigate('/dashboard');
   }, [user, loading, navigate]);
 
   return (
