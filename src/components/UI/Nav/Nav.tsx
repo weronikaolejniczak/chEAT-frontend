@@ -8,8 +8,8 @@ export const Nav = () => {
 
   return (
     <StyledNav>
-      <NavLink icon="home" to="/">
-        {t('home')}
+      <NavLink icon="home" to="/dashboard">
+        {t('dashboard')}
       </NavLink>
       <NavLink icon="gem" to="/benefits">
         {t('benefits')}

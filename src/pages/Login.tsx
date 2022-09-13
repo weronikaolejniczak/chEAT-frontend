@@ -12,7 +12,7 @@ export const Login = () => {
   const [user, loading] = useAuthState(auth);
 
   useEffect(() => {
-    if (user) navigate('/');
+    if (user) navigate('/dashboard');
   }, [user, loading, navigate]);
 
   return (
