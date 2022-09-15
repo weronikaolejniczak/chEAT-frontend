@@ -18,3 +18,8 @@ export const Content = styled.div`
 export const Footer = styled.div`
   font-size: 1.4rem;
 `;
+
+export const Action = styled.span`
+  color: ${({ theme }) => theme.colors.accent};
+  cursor: pointer;
+`;

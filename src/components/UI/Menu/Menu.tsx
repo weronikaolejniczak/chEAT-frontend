@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import { logOut } from 'services/auth/logOut';
 import { useAuth } from 'hooks/useAuth';
 import { Nav } from '../Nav';
 import { Logo } from '../Logo';
-import { Content, Footer, Header, StyledMenu } from './styles';
+import { Action, Content, Footer, Header, StyledMenu } from './styles';
 
 export const Menu = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ export const Menu = () => {
         {user ? (
           <>
             {t('welcome-message', { user: 'Me' })} |{' '}
-            <Link to="/logout">{t('logout')}</Link>
+            <Action onClick={logOut}>{t('logout')}</Action>
           </>
         ) : (
           <>
