@@ -8,15 +8,15 @@ import { LoginForm } from 'components/domains/LoginForm';
 // TODO: add skeleton loader
 export const Login = () => {
   const navigate = useNavigate();
-  const [user, loading] = useAuth();
+  const [user, isLoading] = useAuth();
 
   useEffect(() => {
-    if (user && !loading) navigate('/dashboard');
-  }, [user, loading, navigate]);
+    if (user && !isLoading) navigate('/dashboard');
+  }, [user, isLoading, navigate]);
 
   return (
     <Page center showMenu={false}>
-      {loading ? <div>Loading</div> : <LoginForm />}
+      {isLoading ? <div>Loading</div> : <LoginForm />}
     </Page>
   );
 };
