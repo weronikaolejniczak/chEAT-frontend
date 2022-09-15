@@ -8,6 +8,8 @@ enum ELocales {
   en = 'en',
 }
 
+export const locales = [{ value: ELocales.en, right: '🇺🇸', title: 'English' }];
+
 export enum ENamespaces {
   common = 'common',
   login = 'login',

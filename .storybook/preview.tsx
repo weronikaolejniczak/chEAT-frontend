@@ -4,6 +4,7 @@ import '../src/font-awesome';
 import { withRouter } from './decorators/withRouter';
 import { withTheme, themeToggle } from './decorators/withTheme';
 import { withMocks } from './decorators/withMocks';
+import { localeToggle, withI18n } from './decorators/withI18n';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -16,8 +17,9 @@ export const parameters = {
   layout: 'fullscreen',
 };
 
-export const decorators = [withRouter, withTheme, withMocks];
+export const decorators = [withRouter, withTheme, withMocks, withI18n];
 
 export const globalTypes = {
   theme: themeToggle,
+  locale: localeToggle,
 };
