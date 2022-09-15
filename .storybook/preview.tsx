@@ -1,16 +1,9 @@
-import React from 'react';
-import { DecoratorFn } from '@storybook/react';
-import { BrowserRouter } from 'react-router-dom';
-import { initialize, mswDecorator } from 'msw-storybook-addon';
-
+import '../src/i18n';
 import '../src/font-awesome';
-import { darkTheme, lightTheme } from '../src/constants/themes';
-import { ThemedBlock } from '../src/components/layouts/ThemedBlock';
-import { Preview } from '../src/components/layouts/Preview';
 
-initialize({
-  onUnhandledRequest: 'bypass',
-});
+import { withRouter } from './decorators/withRouter';
+import { withTheme } from './decorators/withTheme';
+import { withMocks } from './decorators/withMocks';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -23,42 +16,7 @@ export const parameters = {
   layout: 'fullscreen',
 };
 
-const withTheme: DecoratorFn = (Story, context) => {
-  const theme = context.parameters.theme || context.globals.theme;
-  const storyTheme = theme === 'dark' ? darkTheme : lightTheme;
-
-  switch (theme) {
-    case 'side-by-side': {
-      return (
-        <Preview>
-          <ThemedBlock half theme={lightTheme}>
-            <Story />
-          </ThemedBlock>
-          <ThemedBlock half theme={darkTheme}>
-            <Story />
-          </ThemedBlock>
-        </Preview>
-      );
-    }
-    default: {
-      return (
-        <ThemedBlock theme={storyTheme}>
-          <Story />
-        </ThemedBlock>
-      );
-    }
-  }
-};
-
-const withRouter: DecoratorFn = (Story) => {
-  return (
-    <BrowserRouter>
-      <Story />
-    </BrowserRouter>
-  );
-};
-
-export const decorators = [withRouter, withTheme, mswDecorator];
+export const decorators = [withRouter, withTheme, withMocks];
 
 export const globalTypes = {
   theme: {
