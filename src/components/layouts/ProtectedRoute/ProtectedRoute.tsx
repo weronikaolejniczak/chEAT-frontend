@@ -9,9 +9,9 @@ type ProtectedRoutePropsType = {
 export const ProtectedRoute = ({
   redirectPath = '/login',
 }: ProtectedRoutePropsType) => {
-  const [user] = useAuth();
+  const [user, isLoading] = useAuth();
 
-  if (!user) return <Navigate to={redirectPath} replace />;
+  if (!user && !isLoading) return <Navigate to={redirectPath} replace />;
 
   return <Outlet />;
 };
