@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StorybookWrapper } from 'components/layouts/StorybookWrapper';
+import { StoryWrapper } from 'components/storybook/StoryWrapper';
 import { Icon } from 'components/UI/Icon';
 import { EIconAlignment } from 'enums/EIconAlignment';
 import { Button, EButtonVariant } from './Button';
@@ -11,9 +11,9 @@ export default {
   argTypes: { onClick: { action: 'clicked' } },
   decorators: [
     (Story) => (
-      <StorybookWrapper>
+      <StoryWrapper>
         <Story />
-      </StorybookWrapper>
+      </StoryWrapper>
     ),
   ],
 } as ComponentMeta<typeof Button>;

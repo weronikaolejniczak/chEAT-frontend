@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { expect, within, user } from 'utils/plays';
-import { StorybookWrapper } from 'components/layouts/StorybookWrapper';
+import { StoryWrapper } from 'components/storybook/StoryWrapper';
 import { PasswordInput } from './PasswordInput';
 
 export default {
@@ -9,9 +9,9 @@ export default {
   component: PasswordInput,
   decorators: [
     (Story) => (
-      <StorybookWrapper>
+      <StoryWrapper>
         <Story />
-      </StorybookWrapper>
+      </StoryWrapper>
     ),
   ],
 } as ComponentMeta<typeof PasswordInput>;

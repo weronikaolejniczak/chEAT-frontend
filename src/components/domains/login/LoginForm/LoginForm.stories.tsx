@@ -1,16 +1,16 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import login from 'mocks/handlers/login';
+import { WithoutStories } from 'components/storybook/WithoutStories.docs';
 import { expect, within, user } from 'utils/plays';
 import { messages } from 'schemas/loginForm';
 import { LoginForm } from './LoginForm';
-import { page } from './LoginForm.docs';
 
 export default {
   title: 'Domains/Login/LoginForm',
   component: LoginForm,
   parameters: {
-    docs: { page },
+    docs: { page: WithoutStories },
     msw: { handlers: [...login] },
   },
 } as ComponentMeta<typeof LoginForm>;
@@ -26,7 +26,7 @@ CorrectForm.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   const emailField = await canvas.findByRole('textbox', { name: /e-mail/i });
-  await user.type(emailField, 'weronika.olejniczak@mail.com', { delay: 100 });
+  await user.type(emailField, 'jane.doe@mail.com', { delay: 100 });
   const passwordField = await canvas.findByLabelText(/password/i);
   await user.type(passwordField, 'SomePassword', { delay: 100 });
   const submitButton = await canvas.findByRole('button', {
@@ -50,7 +50,7 @@ IncorrectForm.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
   const emailField = await canvas.findByRole('textbox', { name: /e-mail/i });
-  await user.type(emailField, 'weronika.olejniczak', { delay: 100 });
+  await user.type(emailField, 'jane.doe', { delay: 100 });
   const passwordField = await canvas.findByLabelText(/password/i);
   const submitButton = await canvas.findByRole('button', {
     name: /^login$/i,

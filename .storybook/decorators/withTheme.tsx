@@ -2,8 +2,8 @@ import React from 'react';
 import { DecoratorFn } from '@storybook/react';
 
 import { darkTheme, lightTheme } from '../../src/constants/themes';
-import { ThemedBlock } from '../../src/components/layouts/ThemedBlock';
-import { Preview } from '../../src/components/layouts/Preview';
+import { ThemedBlock } from '../../src/components/storybook/ThemedBlock';
+import { Preview } from '../../src/components/storybook/Preview';
 
 export const themeToggle = {
   name: 'Theme',

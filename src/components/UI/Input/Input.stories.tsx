@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StorybookWrapper } from 'components/layouts/StorybookWrapper';
+import { StoryWrapper } from 'components/storybook/StoryWrapper';
 import { Icon } from '../Icon';
 import { Input } from './Input';
 
@@ -9,9 +9,9 @@ export default {
   component: Input,
   decorators: [
     (Story) => (
-      <StorybookWrapper>
+      <StoryWrapper>
         <Story />
-      </StorybookWrapper>
+      </StoryWrapper>
     ),
   ],
 } as ComponentMeta<typeof Input>;
