@@ -17,10 +17,36 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
+    "project": ["./tsconfig.json"],
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {},
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["is", "should", "has", "can", "did", "will"]
+      },
+      {
+        "selector": "enum",
+        "format": ["PascalCase"],
+        "prefix": ["E"]
+      },
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "prefix": ["I"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"],
+        "suffix": ["Type"]
+      }
+    ]
+  },
   "settings": {
     "react": {
       "version": "detect"
