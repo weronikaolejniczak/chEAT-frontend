@@ -10,6 +10,7 @@ import { Input } from 'components/UI/Input';
 import { Button } from 'components/UI/Button';
 import { EButtonVariant } from 'components/UI/Button/Button';
 import { PasswordInput } from 'components/UI/PasswordInput';
+import { Logo } from 'components/UI/Logo';
 import { Form } from 'components/layouts/Form';
 import { schema } from 'schemas/loginForm';
 
@@ -34,7 +35,7 @@ export const LoginForm = () => {
   return (
     <div data-testid="login-form">
       <Form.Header>
-        <h1>chEAT</h1>
+        <Logo />
       </Form.Header>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Input
