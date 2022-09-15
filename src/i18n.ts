@@ -12,8 +12,9 @@ export const locales = [{ value: ELocales.en, right: '🇺🇸', title: 'English
 
 export enum ENamespaces {
   common = 'common',
-  login = 'login',
   errors = 'errors',
+  login = 'login',
+  register = 'register',
 }
 
 const ns = Object.values(ENamespaces);
