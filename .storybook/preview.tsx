@@ -2,7 +2,7 @@ import '../src/i18n';
 import '../src/font-awesome';
 
 import { withRouter } from './decorators/withRouter';
-import { withTheme } from './decorators/withTheme';
+import { withTheme, themeToggle } from './decorators/withTheme';
 import { withMocks } from './decorators/withMocks';
 
 export const parameters = {
@@ -19,17 +19,5 @@ export const parameters = {
 export const decorators = [withRouter, withTheme, withMocks];
 
 export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Global theme for components',
-    defaultValue: 'light',
-    toolbar: {
-      icon: 'circlehollow',
-      items: [
-        { value: 'light', icon: 'circlehollow', title: 'light' },
-        { value: 'dark', icon: 'circle', title: 'dark' },
-        { value: 'side-by-side', icon: 'sidebar', title: 'side by side' },
-      ],
-    },
-  },
+  theme: themeToggle,
 };
