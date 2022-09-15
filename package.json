@@ -73,6 +73,7 @@
     "semantic-release": "^19.0.5",
     "typescript": "^4.6.4",
     "vite": "^3.0.7",
+    "vite-plugin-pwa": "^0.12.7",
     "vite-tsconfig-paths": "^3.5.0"
   },
   "resolutions": {
