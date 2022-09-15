@@ -17,7 +17,7 @@ export const Nav = () => {
       <NavLink icon="bullseye" to="/goals">
         {t('goals')}
       </NavLink>
-      <NavLink icon="shop" to="/reedem">
+      <NavLink icon="shop" to="/redeem">
         {t('redeem')}
       </NavLink>
     </StyledNav>
