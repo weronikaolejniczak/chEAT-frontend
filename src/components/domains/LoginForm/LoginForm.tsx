@@ -13,7 +13,7 @@ import { PasswordInput } from 'components/UI/PasswordInput';
 import { Form } from 'components/layouts/Form';
 import { schema } from 'schemas/loginForm';
 
-type FormData = {
+type FormDataType = {
   email: string;
   password: string;
 };
@@ -24,11 +24,11 @@ export const LoginForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>({
+  } = useForm<FormDataType>({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async ({ email, password }: FormData) =>
+  const onSubmit = async ({ email, password }: FormDataType) =>
     await logInWithEmailAndPassword(email, password);
 
   return (
