@@ -34,3 +34,5 @@ export const Button = ({
     </StyledButton>
   );
 };
+
+Button.variant = EButtonVariant;

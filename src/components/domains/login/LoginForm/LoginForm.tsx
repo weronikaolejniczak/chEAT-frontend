@@ -6,11 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { ENamespaces } from 'i18n';
 import { signInWithGoogle } from 'services/auth/signInGoogle';
 import { logInWithEmailAndPassword } from 'services/auth/signInPassword';
-import { Input } from 'components/UI/Input';
-import { Button } from 'components/UI/Button';
-import { EButtonVariant } from 'components/UI/Button/Button';
-import { PasswordInput } from 'components/UI/PasswordInput';
-import { Logo } from 'components/UI/Logo';
+import { Button, Input, Logo, PasswordInput } from 'components/UI';
 import { Form } from 'components/layouts/Form';
 import { schema } from 'schemas/loginForm';
 
@@ -59,7 +55,7 @@ export const LoginForm = () => {
           type="button"
           onClick={signInWithGoogle}
           label={t('login:google-login-button')}
-          variant={EButtonVariant.secondary}
+          variant={Button.variant.secondary}
         />
         <p>
           <Link to="/reset-password">{t('login:reset-password-link')}</Link>
