@@ -1,5 +1,9 @@
 {
   "email-invalid-format-error": "E-mail has to be valid!",
   "email-required-error": "E-mail is required!",
-  "password-required-error": "Password is required!"
+  "name-required-error": "Name is required!",
+  "password-min-chars": "Password has to be at least 8 characters long!",
+  "password-required-error": "Password is required!",
+  "passwords-must-match": "Password don't match!",
+  "repeat-password-required-error": "Enter your password again!"
 }

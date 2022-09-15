@@ -7,6 +7,7 @@ import { Goals } from 'pages/Goals';
 import { Home } from 'pages/Home';
 import { Login } from 'pages/Login';
 import { Redeem } from 'pages/Redeem';
+import { Register } from 'pages/Register';
 import { Theme } from 'components/providers/Theme';
 import { ProtectedRoute } from 'components/layouts/ProtectedRoute';
 
@@ -23,6 +24,7 @@ export const App = () => {
           <Route path="redeem" element={<Redeem />} />
         </Route>
         <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Routes>
     </Theme>
   );

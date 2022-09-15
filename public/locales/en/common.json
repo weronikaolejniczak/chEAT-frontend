@@ -7,8 +7,11 @@
   "login": "Log in",
   "logo-alt-text": "Redirect to dashboard",
   "logout": "Log out",
+  "name": "Name",
   "password": "Password",
   "redeem": "Redeem",
   "register": "Register",
-  "welcome-message": "Welcome, {{user}}!"
+  "repeat-password": "Repeat password",
+  "welcome-message": "Welcome, {{user}}!",
+  "you": "You"
 }
