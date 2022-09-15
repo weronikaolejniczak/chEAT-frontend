@@ -3,7 +3,7 @@ const palette = {
   blueMunsell: '#037dae',
   cultured: '#f5f5f5',
   darkGrey: '#666666',
-  flame: '#e22f02',
+  flame: '#e12b02',
   lightGrey: '#aaaaaa',
   purpureus: '#9d44b5',
   raisinBlack: '#161925',
