@@ -1,13 +1,13 @@
 const palette = {
   black: '#13151f',
-  blueMunsell: '#0280a6',
+  blueMunsell: '#037dae',
   cultured: '#f5f5f5',
   darkGrey: '#666666',
   flame: '#e22f02',
   lightGrey: '#aaaaaa',
   purpureus: '#9d44b5',
   raisinBlack: '#161925',
-  rosePink: '#e30f7f',
+  rosePink: '#dd0465',
   white: '#fcfcfc',
 };
 
