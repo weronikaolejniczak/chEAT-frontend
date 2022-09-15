@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from 'hooks/useAuth';
 import { usePageTitle } from 'hooks/usePageTitle';
 import { Page } from 'components/layouts/Page';
-import { LoginForm } from 'components/domains/LoginForm';
+import { LoginForm } from 'components/domains/login/LoginForm';
 
 // TODO: add skeleton loader
 export const Login = () => {
