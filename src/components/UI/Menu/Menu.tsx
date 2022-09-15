@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useAuth } from 'hooks/useAuth';
 import { Nav } from '../Nav';
+import { Logo } from '../Logo';
 import { Content, Footer, Header, StyledMenu } from './styles';
 
 export const Menu = () => {
@@ -11,7 +12,9 @@ export const Menu = () => {
 
   return (
     <StyledMenu>
-      <Header>Logo</Header>
+      <Header>
+        <Logo size={Logo.size.small} />
+      </Header>
       <Content>
         <Nav />
       </Content>
