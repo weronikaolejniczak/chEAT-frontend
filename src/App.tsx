@@ -1,13 +1,15 @@
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
-import { Benefits } from 'pages/Benefits';
-import { Dashboard } from 'pages/Dashboard';
-import { Goals } from 'pages/Goals';
-import { Home } from 'pages/Home';
-import { Login } from 'pages/Login';
-import { Redeem } from 'pages/Redeem';
-import { Register } from 'pages/Register';
+import {
+  Benefits,
+  Dashboard,
+  Goals,
+  Home,
+  Login,
+  Redeem,
+  Register,
+} from 'pages';
 import { Theme } from 'components/providers/Theme';
 import { ProtectedRoute } from 'components/layouts/ProtectedRoute';
 
