@@ -10,12 +10,10 @@ export const messages = {
   },
 };
 
-export const schema = yup
-  .object({
-    email: yup
-      .string()
-      .email(messages.email.format)
-      .required(messages.email.required),
-    password: yup.string().required(messages.password.required),
-  })
-  .required();
+export const schema = yup.object({
+  email: yup
+    .string()
+    .email(messages.email.format)
+    .required(messages.email.required),
+  password: yup.string().required(messages.password.required),
+});

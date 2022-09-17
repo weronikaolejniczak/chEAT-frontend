@@ -18,20 +18,18 @@ export const messages = {
   },
 };
 
-export const schema = yup
-  .object({
-    email: yup
-      .string()
-      .email(messages.email.format)
-      .required(messages.email.required),
-    name: yup.string().required(messages.name.required),
-    password: yup
-      .string()
-      .required(messages.password.required)
-      .min(8, messages.password.min),
-    repeatPassword: yup
-      .string()
-      .required(messages.repeatPassword.required)
-      .oneOf([yup.ref('password')], messages.repeatPassword.noMatch),
-  })
-  .required();
+export const schema = yup.object({
+  email: yup
+    .string()
+    .email(messages.email.format)
+    .required(messages.email.required),
+  name: yup.string().required(messages.name.required),
+  password: yup
+    .string()
+    .required(messages.password.required)
+    .min(8, messages.password.min),
+  repeatPassword: yup
+    .string()
+    .required(messages.repeatPassword.required)
+    .oneOf([yup.ref('password')], messages.repeatPassword.noMatch),
+});
