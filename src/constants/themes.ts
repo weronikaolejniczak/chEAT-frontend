@@ -1,23 +1,8 @@
-const palette = {
-  black: '#13151f',
-  blueMunsell: '#037dae',
-  cultured: '#f5f5f5',
-  darkGrey: '#666666',
-  flame: '#e12b02',
-  lightGrey: '#aaaaaa',
-  purpureus: '#9d44b5',
-  raisinBlack: '#161925',
-  rosePink: '#dd0465',
-  white: '#fcfcfc',
-};
-
 const baseTheme = {
   borderRadius: '4px',
   colors: {
-    accent: palette.rosePink,
-    error: palette.flame,
-    primary: palette.blueMunsell,
-    secondary: palette.purpureus,
+    primary: '#0C7DBB',
+    secondary: '#B53EDA',
   },
 };
 
@@ -27,10 +12,14 @@ export enum EThemes {
 }
 
 type ColorsType = {
+  accent: string;
   background: string;
+  error: string;
   placeholder: string;
+  success: string;
   surface: string;
   text: string;
+  warning: string;
 };
 
 export const Theme = (key: EThemes, colors: ColorsType) => ({
@@ -42,15 +31,23 @@ export const Theme = (key: EThemes, colors: ColorsType) => ({
 export type ThemeType = ReturnType<typeof Theme>;
 
 export const darkTheme = Theme(EThemes.dark, {
-  background: palette.raisinBlack,
-  placeholder: palette.lightGrey,
-  surface: palette.black,
-  text: palette.white,
+  accent: '#FA1179',
+  background: '#1A1818',
+  error: '#FC3C10',
+  placeholder: '#987979',
+  success: '#44DB78',
+  surface: '#242121',
+  text: '#FCFAF8',
+  warning: '#F28638',
 });
 
 export const lightTheme = Theme(EThemes.light, {
-  background: palette.white,
-  placeholder: palette.darkGrey,
-  surface: palette.cultured,
-  text: palette.raisinBlack,
+  accent: '#E50258',
+  background: '#FCFAF8',
+  error: '#E12607',
+  placeholder: '#876E6D',
+  success: '#44DB78',
+  surface: '#F4EDE6',
+  text: '#1A1818',
+  warning: '#F28638',
 });
