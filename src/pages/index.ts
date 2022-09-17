@@ -5,3 +5,4 @@ export { Home } from './Home';
 export { Login } from './Login';
 export { Redeem } from './Redeem';
 export { Register } from './Register';
+export { ResetPassword } from './ResetPassword';

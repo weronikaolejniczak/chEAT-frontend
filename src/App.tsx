@@ -9,6 +9,7 @@ import {
   Login,
   Redeem,
   Register,
+  ResetPassword,
 } from 'pages';
 import { Theme } from 'components/providers/Theme';
 import { ProtectedRoute } from 'components/layouts/ProtectedRoute';
@@ -27,6 +28,7 @@ export const App = () => {
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="reset-password" element={<ResetPassword />} />
       </Routes>
     </Theme>
   );
