@@ -15,6 +15,7 @@ export enum ENamespaces {
   errors = 'errors',
   login = 'login',
   register = 'register',
+  resetPassword = 'reset-password',
 }
 
 const ns = Object.values(ENamespaces);

@@ -12,6 +12,7 @@
   "redeem": "Redeem",
   "register": "Register",
   "repeat-password": "Repeat password",
+  "reset-password": "Reset password",
   "welcome-message": "Welcome, {{user}}!",
   "you": "You"
 }
